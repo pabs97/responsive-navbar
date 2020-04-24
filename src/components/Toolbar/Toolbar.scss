@@ -1,0 +1,51 @@
+.toolbar {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  background-color: purple;
+}
+
+.toolbar__navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.toolbar__logo {
+  margin-left: 1rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    &:hover, &:active {
+      color: orange;
+    }
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar__navigation-items {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  li {
+    padding: 0 0.5em;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
