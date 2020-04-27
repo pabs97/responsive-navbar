@@ -3,7 +3,7 @@
   left: 0;
   position: fixed;
   width: 100%;
-  height: 56px;
+  height: 3.5rem;
   background-color: purple;
 }
 
@@ -47,5 +47,20 @@
   a {
     color: white;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar__navigation-items {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
+  .toolbar__logo {
+    margin-left: 0;
   }
 }

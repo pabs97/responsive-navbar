@@ -7,15 +7,21 @@ import Backdrop from './components/Backdrop/Backdrop';
 function App() {
 
 
-  // drawerToggleClickHandler = () => {
-  //   this.setState
-  // }
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const drawerToggleClickHandler = () => setDrawerOpen(drawerOpen => !drawerOpen);
+  const backdropClickHandler = () => setDrawerOpen(false);;
+  let backdrop;
 
+  if (drawerOpen) {
+    backdrop = <Backdrop click={backdropClickHandler} />;
+  }
+
+  // TODO: main height needs to be adjusted
   return (
     <div className="App" style={{ height: '100%' }}>
-      <Toolbar />
-      <SideDrawer />
-      <Backdrop />
+      <Toolbar drawerClickHandler={drawerToggleClickHandler} />
+      <SideDrawer show={drawerOpen} />
+      {backdrop}
       <main style={{ marginTop: '4rem' }}>
         <p>This is the page content!</p>
       </main>
